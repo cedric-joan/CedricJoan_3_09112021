@@ -40,7 +40,7 @@ li {
   color: white;
 }
 .ul1 h4 {
-  margin-left: 20%;
+  margin-left: 10%;
 }
 .ul1 i {
   color: white;
@@ -63,7 +63,7 @@ li {
   margin-bottom: 5%;
 }
 /* tablette */
-@media (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   footer {
     display: flex;
     gap: 5%;

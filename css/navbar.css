@@ -1,0 +1,41 @@
+#logo {
+  margin-right: auto;
+  object-fit: cover;
+  margin-bottom: 25px;
+  font-family: shrikhand;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/*icone map*/
+nav .fas {
+  background-color: transparent;
+  padding: 15px 15px;
+}
+/*geoloc*/
+.map {
+  background-color: rgb(238, 237, 237);
+  box-shadow: inset 0 5px rgb(219, 217, 217);
+  display: flex;
+  font-weight: bold;
+}
+nav div {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 767px) {
+  nav div {
+    flex-basis: 100%;
+  }
+  #logo {
+    margin: auto;
+    flex-shrink: 1;
+    margin-bottom: 20px;
+  }
+  .map {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
