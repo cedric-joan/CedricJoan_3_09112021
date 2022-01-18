@@ -16,76 +16,122 @@
   font-family: "Roboto", "sans-serif";
   scroll-behavior: smooth;
 }
-.border {
-  border: 2px solid black;
-}
 a {
   color: black;
   text-decoration: none;
   font-weight: bold;
 }
-p {
-  color: black;
-}
+/* #page-restau footer {
+  background-color: rgb(163, 28, 123);
+} */
 footer {
-  display: flex;
   background-color: rgb(59, 59, 59);
 }
-footer h4 {
-  font-family: shrikhand;
-  color: white;
+.ul1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 li {
   list-style-type: none;
   color: white;
 }
 .ul1 h4 {
-  margin-left: 10%;
+  font-family: shrikhand;
+  color: white;
+  font-size: 20px;
+  margin-left: 2%;
 }
 .ul1 i {
   color: white;
 }
 .utensils {
+  padding-left: 0%;
   display: flex;
-  width: 200%;
-}
-.utensils li {
-  margin-left: 5%;
+  width: 30%;
 }
 .hands {
+  padding-left: 0%;
   display: flex;
-  margin-top: 2%;
+  width: 30%;
 }
-.hands li {
-  margin-left: 5%;
+.mention {
+  display: flex;
+  padding-left: 0%;
+  width: 15%;
 }
-.mention li {
-  margin-bottom: 5%;
+.mail a {
+  color: white;
+  font-weight: 400;
 }
 /* tablette */
 @media (min-width: 768px) and (max-width: 991px) {
-  footer {
+  .ul1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ul1 h4 {
+    padding: 0% 1%;
+  }
+  .ul1 i {
+    margin-left: 0%;
+  }
+  .utensils {
+    padding-left: 0%;
+    width: 100%;
+  }
+  .hands {
+    width: 100%;
+    padding-left: 0%;
+  }
+  .hands .fas {
+    padding: 0% 2.3%;
+  }
+  .mention {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 3%;
+  }
+  .mail a {
     display: flex;
-    gap: 5%;
+    width: 100%;
+    margin-left: -22%;
   }
 }
 /* téléphone mobile */
 @media (max-width: 767px) {
-  footer {
-    margin-left: 0%;
-    width: 100%;
+  .ul1 {
     flex-direction: column;
-  }
-  li {
-    flex-direction: column;
+    align-items: flex-start;
   }
   .ul1 h4 {
-    margin-left: 7%;
+    padding-left: 4.5%;
+    margin-left: 0%;
   }
-  .utensils li {
-    margin-left: 2%;
+  .ul1 i {
+    margin-left: 0%;
   }
-  .hands li {
-    margin-left: 2.5%;
+  .utensils {
+    padding-left: 0%;
+    width: 100%;
+  }
+  .utensils .fas {
+    padding: 0% 4%;
+  }
+  .hands {
+    width: 100%;
+    padding-left: 0%;
+  }
+  .hands .fas {
+    padding: 0% 3%;
+  }
+  .mention {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 3.5%;
+  }
+  .mail a {
+    width: 100%;
+    margin-left: -40%;
   }
 }

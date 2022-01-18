@@ -1,9 +1,9 @@
 .liste-filtres {
   display: flex;
-  gap: 5%;
+  gap: 2%;
   align-items: center;
   flex-wrap: wrap;
-  /* margin-top: 2%; */
+  margin-left: 2%;
 }
 .filtre {
   display: flex;
@@ -11,27 +11,45 @@
   background-color: var(--grislight);
   border-radius: 20px 20px 20px 20px;
   padding: 15px;
-  box-shadow: 0 0 12px gainsboro;
-  width: 400px;
-}
-.filtre:hover {
-  transform: scale(1.02);
-  background-color: var(--primaire);
-  opacity: 0.1;
-  /* background-color: rgb(241, 229, 243); */
-  cursor: pointer;
-  font-weight: bold;
+  box-shadow: 0 5px 10px 0px rgb(230, 223, 233);
+  width: 300px;
+  transition: transform 400ms;
+  flex-grow: 1;
 }
 .filtre span {
-  padding: 10px 0px;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: var(--primaire);
+  border-radius: 30px;
+  margin: -30px;
+  color: rgb(246, 245, 252);
 }
-.filtre .fas {
+.fas {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 40px;
-  margin-left: 5%;
+  padding: 0px 25px;
+  margin-left: 10%;
   color: var(--gris);
+}
+.filtre:hover {
+  transform: scale(1.1);
+  background-color: rgb(241, 229, 243);
+  cursor: pointer;
+}
+.filtre:nth-child(1):hover .fas {
+  color: var(--primaire);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .liste-filtres {
+    display: flex;
+    flex-direction: column;
+  }
+  .filtre {
+    width: 400px;
+    margin-top: 8%;
+  }
 }
 @media (max-width: 767px) {
   main h2 {
@@ -44,7 +62,7 @@
   .filtre {
     align-items: center;
     margin-top: 8%;
-    width: 470px;
+    width: 350px;
   }
   .filtre .fas {
     margin-left: 10%;

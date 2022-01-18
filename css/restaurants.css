@@ -14,7 +14,8 @@
   flex-basis: 20%;
   border-radius: 20px 20px 20px 20px;
   background-color: white;
-  box-shadow: 0 0 15px var(--gris);
+  box-shadow: 0 5px 10px 0px rgb(230, 223, 233);
+  transition: transform 300ms;
 }
 .restaurants > div:hover {
   transform: scale(1.05);
@@ -35,15 +36,51 @@
   justify-content: space-between;
   margin-right: 5%;
 }
-.card i:hover {
-  background-color: var(--primaire);
-  padding: 1px;
-  background-clip: padding-box;
-}
 .designation img {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
 }
+.designation {
+  position: relative;
+}
+
+.designation span {
+  display: grid;
+  position: absolute;
+  height: 30px;
+  width: 95px;
+  place-items: center;
+  background-color: var(--tertiaire);
+  color: #098667;
+  font-weight: 500;
+  top: 15px;
+  right: 15px;
+}
+.card {
+  position: relative;
+}
+.card i {
+  position: absolute;
+  right: 5px;
+}
+.card .far {
+  background-color: transparent;
+}
+.card .fas {
+  right: -20.3px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 400ms;
+  background-image: linear-gradient(var(--secondaire), var(--primaire));
+  opacity: 0;
+}
+.card .fas:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  animation: scale-up-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 /* tablette */
 @media (min-width: 768px) and (max-width: 991px) {
   .restaurants div {
