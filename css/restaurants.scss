@@ -1,4 +1,4 @@
-/*restaurants */
+@use "../sass/utils/mixins.scss";
 .liste-restaurants {
   background-color: var(--grislight);
 }
@@ -11,89 +11,75 @@
     flex-grow: 1;
     margin-bottom: 3%;
     flex-basis: 20%;
-    border-radius: 20px 20px 20px 20px;
     background-color: white;
-    box-shadow: 0 5px 10px 0px rgb(230, 223, 233);
+    @include mixins.border-radius;
+    @include mixins.box-shadow;
     transition: transform 300ms;
   }
-}
-.restaurants > div:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-.designation {
-  position: relative;
-  & span {
-    display: grid;
-    position: absolute;
-    height: 30px;
-    width: 95px;
-    place-items: center;
-    background-color: var(--tertiaire);
-    color: #098667;
-    font-weight: 500;
-    top: 15px;
-    right: 15px;
+  & > div:hover {
+    transform: scale(1.1);
   }
 }
-.designation img {
-width: 100%;
-  border-radius: 20px 20px 0px 0px;
+.menu-card {
+  position: relative;
+  & span {
+    @include mixins.card-new;
+  }
+  & img {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+  }
 }
-.designation-description h3 {
-  margin: 0%;
+.card-description h3{
   margin-left: 3%;
 }
-.designation-description  p {
-  margin: 1%;
-  margin-bottom: 5%;
+.card-description p{
   margin-left: 3%;
-
+  margin-top: 0%;
+  margin-bottom: 6%;
 }
-.card {
+.card-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-right: 5%;
   position: relative;
-}
-   .card i {
+  & i {
     position: absolute;
     right: 5px;
+    margin-top: 5%;
+    font-size: 180%;
   }
-     .card .far {
-      background-color: transparent;
-    }
-      .card .fas {
-        right: -20.3px;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        transition: transform 400ms;
-        background-image: linear-gradient(var(--secondaire), var(--primaire));
-        opacity: 0;
-      }
-        .card .fas:hover {
-          opacity: 1;
-          transform: scale(1.2);
-          animation: scale-up-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-        }
-
-/* tablette */
+  & .far {
+    background-color: transparent;
+  }
+  & .fas {
+    right: -20.3px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform 400ms;
+    background-image: linear-gradient(var(--secondaire), var(--primaire));
+    opacity: 0;
+  }
+  & .fas:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    animation: scale-up-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .restaurants div {
     flex-basis: 35%;
+    & > div {
+      margin-left: 2%;
+    }
   }
-  .restaurants > div {
-    margin-left: 2%;
-  }
-  .designation img {
+  .menu-card img {
     width: 100%;
-    border-radius: 20px 20px 0px 0px;
     object-fit: cover;
   }
 }
-/* téléphone mobile */
 @media (max-width: 767px) {
   .liste-restaurants {
     margin-top: 10%;
@@ -108,15 +94,13 @@ width: 100%;
     justify-content: center;
     & > div {
       margin-left: 5%;
-      box-shadow: 0 0 15px var(--gris);
       width: 90%;
       margin-bottom: 5%;
     }
   }
-  .designation img {
+  .menu-card img {
     width: 100%;
     height: 250px;
-    border-radius: 20px 20px 0px 0px;
     object-fit: cover;
   }
 }
