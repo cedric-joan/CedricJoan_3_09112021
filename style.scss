@@ -1,11 +1,14 @@
 @use "./sass/layout/navbar.scss";
-@use "./sass/layout/explorer.scss";
 @use "./sass/layout/footer.scss";
 @use "./sass/utils/mixins.scss";
+@use "./sass/utils/variables.scss";
+@use "./sass/utils/animations.scss";
 @use "./sass/base.scss";
-@use "./css/fonction.scss";
-@use "./css/animations.scss";
-@use "./css/restaurants.scss";
+@use "./sass/components/explorer.scss";
+@use "./sass/components/fonction.scss";
+@use "./sass/pages/restaurants.scss";
+@use "./sass/pages/menu-resto.scss";
+
 
 
 

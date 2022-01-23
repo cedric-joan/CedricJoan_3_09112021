@@ -1,4 +1,4 @@
-@use "../sass/utils/mixins.scss";
+@use "../utils/mixins.scss";
 .liste-restaurants {
   background-color: var(--grislight);
 }
@@ -15,6 +15,7 @@
     @include mixins.border-radius;
     @include mixins.box-shadow;
     transition: transform 300ms;
+    margin-top: 0px;
   }
   & > div:hover {
     transform: scale(1.1);
@@ -42,32 +43,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 5%;
   position: relative;
   & i {
     position: absolute;
-    right: 5px;
-    margin-top: 5%;
+    right: 20px;
     font-size: 180%;
-  }
-  & .far {
-    background-color: transparent;
-  }
-  & .fas {
-    right: -20.3px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: transform 400ms;
-    background-image: linear-gradient(var(--secondaire), var(--primaire));
-    opacity: 0;
-  }
-  & .fas:hover {
-    opacity: 1;
-    transform: scale(1.2);
-    animation: scale-up-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    & .far {
+      background-color: transparent;
+    }
   }
 }
+      .card-title .fas {
+        background-clip: text;
+        right: -5px;
+         -webkit-background-clip: text;
+           color: transparent;
+            transition: transform 400ms;
+           background-image: linear-gradient(var(--secondaire), var(--primaire));
+          opacity: 0;
+        }
+          .card-title .fas:hover {
+              opacity: 1;
+              transform: scale(1.2);
+              animation: scale-up-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          cursor: pointer;
+            }
+
+    
 @media (min-width: 768px) and (max-width: 991px) {
   .restaurants div {
     flex-basis: 35%;
@@ -98,9 +100,13 @@
       margin-bottom: 5%;
     }
   }
+  .card-description h3{
+    margin-top: 0%;
+  }
   .menu-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
   }
 }
+

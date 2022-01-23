@@ -1,5 +1,5 @@
-@use "./animations.scss";
-@use "../sass/utils/mixins.scss";
+@use "../utils/animations.scss";
+@use "../utils/mixins.scss";
 .liste-fonction {
   display: flex;
   gap: 2%;
@@ -30,7 +30,7 @@
   }
   }
 .fonction:hover {
-    background-color: rgb(241, 229, 243);
+    background-color:rgb(241, 229, 243);
   &:hover .fas {
     color: var(--primaire);
   }

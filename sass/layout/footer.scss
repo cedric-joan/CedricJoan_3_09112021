@@ -1,4 +1,3 @@
-
 footer {
     background-color: rgb(59, 59, 59);
   }
@@ -75,6 +74,9 @@ footer {
   }
   /* téléphone mobile */
   @media (max-width: 767px) {
+    footer {
+      padding-bottom: 10%;
+    }
     .ul1 {
       flex-direction: column;
       align-items: flex-start;

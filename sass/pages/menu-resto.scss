@@ -1,0 +1,74 @@
+@use "../base.scss";
+@use "../utils/mixins.scss";
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    .fas {
+        position: absolute;
+        font-size: 110%;
+        color: black;
+        left: -10%;
+        top: 30%;
+        padding-left: 5%;
+    }
+    img {
+        margin-left: auto;
+        margin-bottom: 5px;
+        max-width: 300px;
+    }
+  }
+.menu-resto img{
+    width: 100%;
+    object-fit: cover;
+}
+.menu-card__1{
+    margin-top: -85px;
+  background-color: var(--grislight);
+    border-radius: 50px 50px 0px 0px;
+}
+.card-title__1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    & i {
+      position: absolute;
+      right: 70px;
+      font-size: 180%;
+      & .far {
+        background-color: transparent;
+      }
+    }
+  }
+        .card-title .fas {
+          background-clip: text;
+          right: 45px;
+           -webkit-background-clip: text;
+             color: transparent;
+              transition: transform 400ms;
+             background-image: linear-gradient(var(--secondaire), var(--primaire));
+            opacity: 0;
+          }
+            .card-title .fas:hover {
+                opacity: 1;
+                transform: scale(1.2);
+                animation: scale-up-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            cursor: pointer;
+              }
+.menu-card h1{
+    font-family: "shrikhand", "sans-serif";
+    font-size: 200%;
+    margin-left: 5%;
+}
+
+@media (max-width: 767px) {
+    header {
+      flex-basis: 100%;
+    }
+     img {
+      margin: auto;
+      margin-bottom: 20px;
+    }
+}
