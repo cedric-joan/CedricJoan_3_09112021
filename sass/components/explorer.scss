@@ -14,6 +14,7 @@ button a{
 }
 button {
   display: flex;
+  @include mixins.box-shadow;
   flex-wrap: wrap;
   border-radius: 30px 30px 30px 30px;
   background-image: linear-gradient(var(--secondaire), var(--primaire));
@@ -21,11 +22,10 @@ button {
   padding: 15px 20px;
   border: none;
   transition: transform 400ms;
-  animation: bounce-in-top 2s both;
   opacity: 0.9;
-  @include mixins.box-shadow;
   &:hover {
     opacity: 1;
+
   }
   }
 @media (max-width: 767px) {

@@ -13,7 +13,6 @@ nav {
   position: relative;
   background-color: rgb(238, 237, 237);
   box-shadow: inset 0px 3px 2px rgb(219, 217, 217);
-  // display: flex;
   font-weight: bold;
   justify-content: center;
   width: 100%;
@@ -28,6 +27,9 @@ nav div {
   justify-content: space-around;
 }
 @media (max-width: 767px) {
+  header img{
+margin: auto;
+  }
   nav div {
     flex-basis: 100%;
   }

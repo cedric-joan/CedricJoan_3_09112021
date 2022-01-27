@@ -8,8 +8,8 @@ footer {
     & h4 {
       font-family: shrikhand;
       color: white;
-      font-size: 20px;
-      margin-left: 2%;
+      font-size: 25px;
+      margin-left: 2rem;
     }
    i {
          color: white;
@@ -19,19 +19,14 @@ footer {
     list-style-type: none;
     color: white;
   }
-  .utensils {
-    padding-left: 0%;
+  .utensils, .hands {
+    padding: 0rem;
     display: flex;
-    width: 30%;
-  }
-  .hands {
-    padding-left: 0%;
-    display: flex;
-    width: 30%;
+    width: 25%;
   }
   .mention {
     display: flex;
-    padding-left: 0%;
+    padding-left: 0rem;
     width: 15%;
   }
   .mail a {
@@ -44,71 +39,84 @@ footer {
       flex-direction: column;
       align-items: flex-start;
        h4 {
-        padding: 0% 1%;
+        padding: 0rem 0.5rem;
+        margin-bottom: 0.5rem;
+
       }
          i {
-          margin-left: 0%;
+          margin-left: 0rem;
         }
     }
     .utensils {
-      padding-left: 0%;
+      padding-left: 1rem;
       width: 100%;
+      margin-bottom: 0rem;
+
     }
     .hands {
       width: 100%;
-      padding-left: 0%;
+      margin-bottom: 0rem;
+
+      padding-left: 1rem;
       .fas {
-      padding: 0% 2.3%;
+      padding: 0rem 1rem;
       }
     }
     .mention {
       flex-direction: column;
       width: 100%;
-      padding-left: 3%;
+      padding-left: 2rem;
+      margin-bottom: 0rem;
     }
     .mail a {
       display: flex;
       width: 100%;
-      margin-left: -22%;
+      margin-left: -0.5rem;
     }
   }
   /* téléphone mobile */
   @media (max-width: 767px) {
     footer {
-      padding-bottom: 10%;
+      padding-bottom: 3rem;
     }
     .ul1 {
       flex-direction: column;
       align-items: flex-start;
        h4 {
-        padding-left: 4.5%;
-        margin-left: 0%;
+        padding-left: 1.5rem;
+        margin-left: 0rem;
+        margin-bottom: 0.5rem;
       }
          i {
-          margin-left: 0%;
+          margin-left: 0rem;
         }
     }
     .utensils {
-      padding-left: 0%;
+      padding-left: 0rem;
       width: 100%;
+      margin-bottom: 0rem;
+
       .fas {
-        padding: 0% 4%;
+        padding: 0rem 1.4rem;
       }
     }
     .hands {
       width: 100%;
-      padding-left: 0%;
+      padding-left: 0rem;
+      margin-bottom: 0rem;
+
       .fas {
-        padding: 0% 3%;
+        padding: 0rem 1.2rem;
       }
     }
     .mention {
       flex-direction: column;
       width: 100%;
-      padding-left: 3.5%;
+      padding-left: 1.3rem;
+      margin-bottom: 0rem;
     }
     .mail a {
       width: 100%;
-      margin-left: -40%;
+      margin-left: -1.3rem;
     }
   }
