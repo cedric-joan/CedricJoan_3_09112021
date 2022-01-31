@@ -9,25 +9,14 @@
   color: var(--gris);
   font-size: 18px;
 }
-button a{
+.btn__explorer a{
   color: white;
 }
-button {
-  display: flex;
-  @include mixins.box-shadow;
-  flex-wrap: wrap;
-  border-radius: 30px 30px 30px 30px;
-  background-image: linear-gradient(var(--secondaire), var(--primaire));
-  font-size: 20px;
-  padding: 15px 20px;
-  border: none;
-  transition: transform 400ms;
-  opacity: 0.9;
-  &:hover {
-    opacity: 1;
-
+.btn__explorer {
+    @include mixins.button;
+    @include mixins.box-shadow;
   }
-  }
+  
 @media (max-width: 767px) {
   .explorer {
     display: flex;

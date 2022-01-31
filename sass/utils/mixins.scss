@@ -17,4 +17,18 @@
     top: 15px;
     right: 15px;
 } 
+@mixin button {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 30px 30px 30px 30px;
+  background-image: linear-gradient(var(--secondaire), var(--primaire));
+  font-size: 20px;
+  padding: 15px 20px;
+  border: none;
+  transition: transform 400ms;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+  }
 
