@@ -181,6 +181,40 @@ li {
     margin-left: -1.3rem;
   }
 }
+@keyframes spin-check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes move-in-top {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate();
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 :root {
   --primaire: #9356dc;
   --secondaire: #ff79da;
@@ -234,6 +268,33 @@ h5 {
 }
 .btn__explorer:hover {
   opacity: 1;
+}
+
+.loader {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: loader 200ms 3s forwards;
+  transform-origin: top;
+}
+
+.loader__spin {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--gris);
+  border-right-color: var(--secondaire);
+  border-bottom-color: var(--tertiaire);
+  border-top-color: var(--primaire);
+  border-radius: 50%;
+  animation: spin 3s infinite linear;
 }
 
 @media (max-width: 767px) {
@@ -490,7 +551,7 @@ header .fas {
 header img {
   margin-left: auto;
   margin-bottom: 0.8rem;
-  max-width: 200px;
+  max-width: 180px;
 }
 
 .resto__image img {
@@ -507,7 +568,7 @@ header img {
 }
 .resto__card h1 {
   font-family: "shrikhand", "sans-serif";
-  font-size: 200%;
+  font-size: 180%;
   margin-left: 1rem;
 }
 
@@ -540,72 +601,89 @@ header img {
   cursor: pointer;
 }
 
-.menu-resto {
+.menu__resto {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.menu-list > p {
+.menu__list > p {
   font-size: 18px;
   border-bottom: 3px solid var(--tertiaire);
   width: 45px;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
-.menu-list .menu-title {
+.menu__list .menu__title {
   display: flex;
+  flex-wrap: wrap;
   width: 400px;
-  height: 75px;
+  height: 70px;
   overflow: hidden;
   margin-bottom: 1rem;
   background-color: white;
   flex-direction: column;
-  flex-wrap: wrap;
+  white-space: nowrap;
   border-radius: 20px 20px 20px 20px;
   box-shadow: 0 5px 10px 0px #e6dfe9;
+  animation: move-in-top 1s ease-in-out;
+  animation-fill-mode: both;
+}
+.menu__list .menu__title--1 {
+  animation-delay: 200ms;
+}
+.menu__list .menu__title--2 {
+  animation-delay: 400ms;
+}
+.menu__list .menu__title--3 {
+  animation-delay: 600ms;
 }
 
-.menu-description {
-  border: 1px solid blue;
-  height: 75px;
+.menu__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-left: 0.5rem;
-  width: 270px;
+  width: 75%;
+  height: 70px;
+  transition: all 600ms ease-in-out;
 }
-.menu-description h4 {
-  margin-top: 0.8rem;
-  border: 1px solid #ffbb00;
-  margin-bottom: 0.2rem;
+.menu__description h4 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
   font-size: 17px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu-description p {
+.menu__description p {
   margin-top: 0rem;
   font-size: 14px;
-  border: 1px solid #ffbb00;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.menu-price {
+.menu__price {
   display: flex;
   justify-content: flex-end;
   margin-top: 2.5rem;
-  border: 1px solid blue;
   font-weight: bold;
   margin-left: auto;
 }
 
-.menu-check {
+.menu__check {
   height: 75px;
   border-radius: 0px 20px 20px 0px;
   padding: 0rem;
-  width: 4rem;
+  width: 4.2rem;
   margin-left: auto;
   flex-shrink: 0;
   background-color: var(--tertiaire);
   margin-right: -4.3rem;
   transition: all 600ms ease-in-out;
 }
-.menu-check .fa-check-circle {
+.menu__check .fa-check-circle {
   font-size: 160%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -613,18 +691,21 @@ header img {
   margin-left: 0rem;
   padding: 0rem;
   margin-top: 1.5rem;
-  transform: rotate(-270deg);
-  transition: transform 1s ease-in-out;
+  animation: 1s ease-in-out;
 }
 
-.menu-title:hover {
+.menu__title:hover {
   cursor: pointer;
 }
-.menu-title:hover:hover .menu-check {
+.menu__title:hover:hover .menu__check {
   margin-right: 0rem;
 }
-.menu-title:hover:hover .menu-check .fa-check-circle {
-  transform: rotate(0deg);
+.menu__title:hover:hover .menu__check .fa-check-circle {
+  animation-name: spin-check;
+}
+
+.menu__title:hover .menu__description {
+  width: 65%;
 }
 
 .btn__order {
@@ -649,64 +730,44 @@ header img {
   padding: 0rem 2.5rem;
 }
 
+.order {
+  height: 20vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--grislight);
+  padding-bottom: 2rem;
+}
+
 @media (min-width: 768px) and (max-width: 1245px) {
-  .menu-list {
+  .menu__list {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .menu-list > p {
+  .menu__list > p {
     margin-left: 1rem;
   }
-  .menu-list .menu-title {
+  .menu__list .menu__title {
     width: 95%;
     margin-left: 1rem;
   }
-  .menu-list .menu-description {
-    width: 500px;
-  }
 }
 @media (max-width: 767px) {
-  .menu-list {
+  .menu__list {
     width: 100%;
     flex-direction: column;
     justify-content: center;
   }
-  .menu-list > p {
+  .menu__list > p {
     margin-left: 0.8rem;
   }
-  .menu-list .menu-title {
+  .menu__list .menu__title {
+    overflow: hidden;
     width: 93%;
     margin-left: 0.8rem;
   }
-
-  .menu-description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: 1px solid blue;
-    width: 255px;
-  }
-  .menu-description h4 {
-    border: 1px solid #ffbb00;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .menu-description p {
-    border: 1px solid #ffbb00;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-}
-.order {
-  display: flex;
-  justify-content: center;
-  background-color: var(--grislight);
-  padding-top: 2rem;
-  padding-bottom: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
