@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass style.scss style.css --watch" 
+    "sass": "sass style.scss style.css --watch",
+    "build": "postcss style.css -u autoprefixer -o ./build/style.min.css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,10 @@
   "homepage": "https://github.com/cedric-joan/P3ohmyfood#readme",
   "dependencies": {
     "sass": "^1.48.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0"
   }
 }
