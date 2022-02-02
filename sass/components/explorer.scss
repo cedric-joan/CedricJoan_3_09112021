@@ -6,14 +6,15 @@
   margin-bottom: 45px;
   background-color: var(--grislight);
 }
-.titre p {
+.titre{
+  text-align: center;
+ & p {
   color: var(--gris);
   font-size: 18px;
-}
-.btn__explorer a{
-  color: white;
+ }
 }
 .btn__explorer {
+    margin: auto;
     @include mixins.button;
     @include mixins.box-shadow;
   }
@@ -26,22 +27,22 @@
     inset: 0;
     z-index: 1;
     opacity: 0.9;
-    animation: loader 200ms 3s forwards;
+    animation: loader 400ms 3s forwards;
     transform-origin: top;
   }
   .loader__spin{
     position: relative;
     display: grid;
     place-items: center;
-    width: 50px;
-    height: 50px;
-    border: 5px solid var(--gris);
+    width: 60px;
+    height: 60px;
+    border: 6px solid var(--gris);
     border-right-color: var(--secondaire);
     border-bottom-color: var(--tertiaire);
     border-top-color: var(--primaire);
     border-radius: 50%;
     animation: spin 3s infinite linear;
-      
+    
   }
 
 @media (max-width: 767px) {

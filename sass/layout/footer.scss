@@ -1,7 +1,7 @@
 footer {
     background-color: rgb(59, 59, 59);
   }
-  .ul1 {
+  .end {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -9,8 +9,14 @@ footer {
       font-family: shrikhand;
       color: white;
       font-size: 25px;
-      margin-left: 2rem;
+      margin-left: 1.5rem;
     }
+      & p{
+      color: white;
+      padding: 0rem;
+      margin: 0rem;
+      }
+    
    i {
          color: white;
       }
@@ -33,80 +39,28 @@ footer {
     color: white;
     font-weight: 400;
   }
-  /* tablette */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .ul1 {
-      flex-direction: column;
-      align-items: flex-start;
-       h4 {
-        padding: 0rem 0.5rem;
-        margin-bottom: 0.5rem;
-
-      }
-         i {
-          margin-left: 0rem;
-        }
-    }
-    .utensils {
-      padding-left: 1rem;
-      width: 100%;
-      margin-bottom: 0rem;
-
-    }
-    .hands {
-      width: 100%;
-      margin-bottom: 0rem;
-
-      padding-left: 1rem;
-      .fas {
-      padding: 0rem 1rem;
-      }
-    }
-    .mention {
-      flex-direction: column;
-      width: 100%;
-      padding-left: 2rem;
-      margin-bottom: 0rem;
-    }
-    .mail a {
-      display: flex;
-      width: 100%;
-      margin-left: -0.5rem;
-    }
-  }
-  /* téléphone mobile */
-  @media (max-width: 767px) {
+  @media (max-width: 991px){
     footer {
       padding-bottom: 3rem;
     }
     .ul1 {
       flex-direction: column;
       align-items: flex-start;
-       h4 {
-        padding-left: 1.5rem;
-        margin-left: 0rem;
-        margin-bottom: 0.5rem;
-      }
-         i {
-          margin-left: 0rem;
-        }
+      
     }
     .utensils {
-      padding-left: 0rem;
       width: 100%;
-      margin-bottom: 0rem;
-
+      margin-bottom: 1rem;
       .fas {
-        padding: 0rem 1.4rem;
+        padding-left: 0rem;
       }
     }
     .hands {
       width: 100%;
-      padding-left: 0rem;
-      margin-bottom: 0rem;
-
       .fas {
-        padding: 0rem 1.2rem;
+        padding: 0rem 0.9rem; 
+        padding-left: 0rem;
+
       }
     }
     .mention {

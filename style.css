@@ -1,12 +1,10 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&family=Shrikhand&display=swap");
 nav {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 }
 nav img {
-  margin-left: auto;
+  margin: auto;
   margin-bottom: 5px;
   max-width: 300px;
 }
@@ -17,10 +15,11 @@ nav img {
   background-color: #eeeded;
   box-shadow: inset 0px 3px 2px #dbd9d9;
   font-weight: bold;
-  justify-content: center;
+  margin-left: auto;
   width: 100%;
 }
 .map .fas {
+  margin-left: auto;
   color: black;
   position: relative;
   background-color: transparent;
@@ -45,6 +44,12 @@ nav div {
     flex-basis: 100%;
     justify-content: center;
   }
+  .map .fas {
+    margin-left: 1.8rem;
+    color: black;
+    position: relative;
+    background-color: transparent;
+  }
   .map p {
     margin-right: 80px;
   }
@@ -53,18 +58,23 @@ footer {
   background-color: #3b3b3b;
 }
 
-.ul1 {
+.end {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.ul1 h4 {
+.end h4 {
   font-family: shrikhand;
   color: white;
   font-size: 25px;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
 }
-.ul1 i {
+.end p {
+  color: white;
+  padding: 0rem;
+  margin: 0rem;
+}
+.end i {
   color: white;
 }
 
@@ -90,50 +100,7 @@ li {
   font-weight: 400;
 }
 
-/* tablette */
-@media (min-width: 768px) and (max-width: 991px) {
-  .ul1 {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .ul1 h4 {
-    padding: 0rem 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .ul1 i {
-    margin-left: 0rem;
-  }
-
-  .utensils {
-    padding-left: 1rem;
-    width: 100%;
-    margin-bottom: 0rem;
-  }
-
-  .hands {
-    width: 100%;
-    margin-bottom: 0rem;
-    padding-left: 1rem;
-  }
-  .hands .fas {
-    padding: 0rem 1rem;
-  }
-
-  .mention {
-    flex-direction: column;
-    width: 100%;
-    padding-left: 2rem;
-    margin-bottom: 0rem;
-  }
-
-  .mail a {
-    display: flex;
-    width: 100%;
-    margin-left: -0.5rem;
-  }
-}
-/* téléphone mobile */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   footer {
     padding-bottom: 3rem;
   }
@@ -142,31 +109,21 @@ li {
     flex-direction: column;
     align-items: flex-start;
   }
-  .ul1 h4 {
-    padding-left: 1.5rem;
-    margin-left: 0rem;
-    margin-bottom: 0.5rem;
-  }
-  .ul1 i {
-    margin-left: 0rem;
-  }
 
   .utensils {
-    padding-left: 0rem;
     width: 100%;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
   }
   .utensils .fas {
-    padding: 0rem 1.4rem;
+    padding-left: 0rem;
   }
 
   .hands {
     width: 100%;
-    padding-left: 0rem;
-    margin-bottom: 0rem;
   }
   .hands .fas {
-    padding: 0rem 1.2rem;
+    padding: 0rem 0.9rem;
+    padding-left: 0rem;
   }
 
   .mention {
@@ -209,7 +166,7 @@ li {
 }
 @keyframes spin {
   0% {
-    transform: rotate();
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -238,6 +195,15 @@ h5 {
   padding: 0rem;
 }
 
+h2 {
+  margin: 1em 2em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .reserver {
   display: flex;
   flex-direction: column;
@@ -245,29 +211,31 @@ h5 {
   background-color: var(--grislight);
 }
 
+.titre {
+  text-align: center;
+}
 .titre p {
   color: var(--gris);
   font-size: 18px;
 }
 
-.btn__explorer a {
-  color: white;
-}
-
 .btn__explorer {
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   border-radius: 30px 30px 30px 30px;
   background-image: linear-gradient(var(--secondaire), var(--primaire));
-  font-size: 20px;
-  padding: 15px 20px;
+  font-size: 18px;
+  padding: 20px 30px;
   border: none;
+  color: white;
   transition: transform 400ms;
   opacity: 0.9;
   box-shadow: 0 5px 10px 0px #e6dfe9;
 }
 .btn__explorer:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .loader {
@@ -279,7 +247,7 @@ h5 {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: loader 200ms 3s forwards;
+  animation: loader 400ms 3s forwards;
   transform-origin: top;
 }
 
@@ -287,9 +255,9 @@ h5 {
   position: relative;
   display: grid;
   place-items: center;
-  width: 50px;
-  height: 50px;
-  border: 5px solid var(--gris);
+  width: 60px;
+  height: 60px;
+  border: 6px solid var(--gris);
   border-right-color: var(--secondaire);
   border-bottom-color: var(--tertiaire);
   border-top-color: var(--primaire);
@@ -327,7 +295,8 @@ h5 {
 }
 .liste-fonction {
   display: flex;
-  gap: 2%;
+  justify-content: space-around;
+  gap: 5%;
   align-items: center;
   flex-wrap: wrap;
   margin-left: 1.5rem;
@@ -370,7 +339,7 @@ h5 {
   color: var(--gris);
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1040px) {
   .liste-fonction {
     display: flex;
     flex-direction: column;
@@ -394,7 +363,7 @@ h5 {
   .fonction {
     align-items: center;
     margin-top: 2rem;
-    width: 400px;
+    width: 350px;
   }
   .fonction .fas {
     margin-left: 2rem;
@@ -427,7 +396,8 @@ h5 {
 .menu-card {
   position: relative;
 }
-.menu-card span {
+.menu-card.new::before {
+  content: "Nouveau";
   display: grid;
   position: absolute;
   height: 30px;
@@ -474,7 +444,7 @@ h5 {
   right: -5px;
   -webkit-background-clip: text;
   color: transparent;
-  transition: transform 400ms;
+  transition: transform 400ms, opacity 500ms;
   background-image: linear-gradient(var(--secondaire), var(--primaire));
   opacity: 0;
 }
@@ -482,7 +452,6 @@ h5 {
 .card-title .fas:hover {
   opacity: 1;
   transform: scale(1.2);
-  animation: scale-up-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   cursor: pointer;
 }
 
@@ -519,7 +488,7 @@ h5 {
     justify-content: center;
   }
   .restaurants > div {
-    margin-left: 1.5rem;
+    margin-left: 1.25rem;
     width: 90%;
     margin-bottom: 1.5rem;
   }
@@ -545,12 +514,13 @@ header .fas {
   position: absolute;
   font-size: 110%;
   color: black;
-  top: 25%;
+  top: 35%;
   padding: 0rem;
 }
 header img {
-  margin-left: auto;
+  margin: auto;
   margin-bottom: 0.8rem;
+  padding-top: 0.8rem;
   max-width: 180px;
 }
 
@@ -568,7 +538,7 @@ header img {
 }
 .resto__card h1 {
   font-family: "shrikhand", "sans-serif";
-  font-size: 180%;
+  font-size: 170%;
   margin-left: 1rem;
 }
 
@@ -580,18 +550,18 @@ header img {
 }
 .resto__title i {
   position: absolute;
-  right: 15px;
-  font-size: 180%;
+  right: 20px;
+  font-size: 170%;
 }
 .resto__title .far {
   background-color: transparent;
 }
 .resto__title .fas {
   background-clip: text;
-  right: -10px;
+  right: -4px;
   -webkit-background-clip: text;
   color: transparent;
-  transition: transform 400ms;
+  transition: transform 400ms, opacity 500ms;
   background-image: linear-gradient(var(--secondaire), var(--primaire));
   opacity: 0;
 }
@@ -611,6 +581,7 @@ header img {
   font-size: 18px;
   border-bottom: 3px solid var(--tertiaire);
   width: 45px;
+  padding-bottom: 0.3em;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -664,12 +635,25 @@ header img {
   text-overflow: ellipsis;
 }
 
+.menu__description--wrap {
+  width: 62%;
+}
+.menu__description--wrap h4 {
+  overflow: visible;
+  white-space: normal;
+  margin-top: 0.3rem;
+}
+
 .menu__price {
   display: flex;
   justify-content: flex-end;
   margin-top: 2.5rem;
   font-weight: bold;
   margin-left: auto;
+}
+
+.menu__price--margin {
+  margin-left: 3rem;
 }
 
 .menu__check {
@@ -708,34 +692,35 @@ header img {
   width: 65%;
 }
 
+.menu__title:hover .menu__description--wrap {
+  width: 62%;
+}
+
+.order {
+  background-color: var(--grislight);
+  height: 25vh;
+  padding-top: 3em;
+}
+
 .btn__order {
+  margin: auto;
   width: 250px;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   border-radius: 30px 30px 30px 30px;
   background-image: linear-gradient(var(--secondaire), var(--primaire));
-  font-size: 20px;
-  padding: 15px 20px;
+  font-size: 18px;
+  padding: 20px 30px;
   border: none;
+  color: white;
   transition: transform 400ms;
   opacity: 0.9;
   box-shadow: 0 5px 10px 0px #e6dfe9;
 }
 .btn__order:hover {
   opacity: 1;
-}
-.btn__order a {
-  color: white;
-  margin-left: 0.3rem;
-  padding: 0rem 2.5rem;
-}
-
-.order {
-  height: 20vh;
-  display: grid;
-  place-items: center;
-  background-color: var(--grislight);
-  padding-bottom: 2rem;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) and (max-width: 1245px) {

@@ -13,31 +13,27 @@
 </head>
 
 <body>
-    <section class="loader">
-        <div class="loader__spin"></div>
-    </section>
     <header>
         <img src="../logo/ohmyfood.png" alt="logo" />
     </header>
+    <div class="loader">
+        <div class="loader__spin"></div>
+    </div>
     <nav>
         <div class="map">
             <i class="fas fa-map-marker-alt"></i>
             <p>Paris, Belleville</p>
         </div>
     </nav>
-    <!-- section 2 -->
     <section class="reserver">
         <div class="titre">
             <h1> Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         </div>
         <div class="explorer">
-            <button class="btn btn__explorer">
-                <a href="#">Explorer nos restaurants</a>
-            </button>
+            <button class="btn btn__explorer">Explorer nos restaurants</button>
         </div>
     </section>
-    <!-- section 3 -->
     <main>
         <h2>Fonctionnement</h2>
         <div class="liste-fonction">
@@ -64,12 +60,10 @@
             </a>
         </div>
     </main>
-    <!-- section 4 -->
     <section class="liste-restaurants">
         <h2 id="restaurants-titre">Restaurants</h2>
         <div class="restaurants">
-            <div class="menu-card">
-                <span>Nouveau</span>
+            <div class="menu-card new">
                 <a href="./pages/resto-1.html"><img src="restaurants/la_palette_du_gout.jpg"
                         alt="photo_la_palette_du_goût" />
                     <div class="card-description">
@@ -82,9 +76,9 @@
                     </div>
                 </a>
             </div>
-            <div class="menu-card">
-                <span>Nouveau</span>
-                <a href="#"><img src="restaurants/la_note_enchantee.jpg" alt="photo_la_note_enchantee" />
+            <div class="menu-card new">
+                <a href="./pages/resto-2.html"><img src="restaurants/la_note_enchantee.jpg"
+                        alt="photo_la_note_enchantee" />
                     <div class="card-description">
                         <div class="card-title">
                             <h3>La note enchantée</h3>
@@ -96,10 +90,10 @@
                 </a>
             </div>
             <div class="menu-card">
-                <a href="#"><img src="restaurants/a_la_française.jpg" alt="photo_a_la_française" />
+                <a href="./pages/resto-3.html"><img src="restaurants/a_la_francaise.jpg" alt="photo_a_la_francaise" />
                     <div class="card-description">
                         <div class="card-title">
-                            <h3>A la française</h3>
+                            <h3>À la française</h3>
                             <i class="far fa-heart"></i>
                             <i class="fas fa-heart"></i>
                         </div>
@@ -108,7 +102,8 @@
                 </a>
             </div>
             <div class="menu-card">
-                <a href="#"><img src="restaurants/le_delice_des_sens.jpg" alt="photo_le_delice_des_sens" />
+                <a href="./pages/resto-4.html"><img src="restaurants/le_delice_des_sens.jpg"
+                        alt="photo_le_delice_des_sens" />
                     <div class="card-description">
                         <div class="card-title">
                             <h3>Le délice des sens</h3>
@@ -121,18 +116,17 @@
             </div>
         </div>
     </section>
-    <!-- footer -->
     <footer>
-        <div class="ul1">
+        <div class="end">
             <h4>ohmyfood</h4>
-            <ul class="utensils">
+            <div class="utensils">
                 <i class="fas fa-utensils"></i>
-                <li>Proposer un restaurant</li>
-            </ul>
-            <ul class="hands">
+                <p>Proposer un restaurant</p>
+            </div>
+            <div class="hands">
                 <i class="fas fa-hands-helping"></i>
-                <li>Devenir partenaire</li>
-            </ul>
+                <p>Devenir partenaire</p>
+            </div>
             <ul class="mention">
                 <li>Mention légales</li>
             </ul>

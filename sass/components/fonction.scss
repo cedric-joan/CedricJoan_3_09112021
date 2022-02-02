@@ -2,7 +2,8 @@
 @use "../utils/mixins.scss";
 .liste-fonction {
   display: flex;
-  gap: 2%;
+  justify-content: space-around;
+  gap: 5%;
   align-items: center;
   flex-wrap: wrap;
   margin-left: 1.5rem;
@@ -41,7 +42,7 @@
   margin-left: 1.5rem;
   color: var(--gris);
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1040px) {
   .liste-fonction {
     display: flex;
     flex-direction: column;
@@ -62,9 +63,9 @@
   .fonction {
     align-items: center;
     margin-top: 2rem;
-    width: 400px;
+    width: 350px;
      .fas {
       margin-left: 2rem;
     }
-  }
+}
 }

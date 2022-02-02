@@ -1,9 +1,8 @@
 nav {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-    img {
-      margin-left: auto;
+  img {
+      margin: auto;
       margin-bottom: 5px;
       max-width: 300px;
 }
@@ -14,9 +13,10 @@ nav {
   background-color: rgb(238, 237, 237);
   box-shadow: inset 0px 3px 2px rgb(219, 217, 217);
   font-weight: bold;
-  justify-content: center;
+  margin-left: auto;
   width: 100%;
    .fas {
+  margin-left: auto;
      color: black;
      position: relative;
     background-color: transparent;
@@ -37,6 +37,12 @@ margin: auto;
     display: flex;
     flex-basis: 100%;
     justify-content: center;
+    .fas {
+      margin-left: 1.8rem;
+         color: black;
+         position: relative;
+        background-color: transparent;
+      }
   p {
     margin-right: 80px;
   }

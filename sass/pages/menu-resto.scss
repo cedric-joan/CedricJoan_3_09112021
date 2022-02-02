@@ -10,12 +10,13 @@ header {
         position: absolute;
         font-size: 110%;
         color: black;
-        top: 25%;
+        top: 35%;
         padding: 0rem;
     }
     img {
-        margin-left: auto;
+        margin: auto;
         margin-bottom: 0.8rem;
+        padding-top: 0.8rem;
         max-width: 180px;
     }
 }
@@ -31,7 +32,7 @@ header {
     border-radius: 50px 50px 0px 0px;
     & h1{
         font-family: "shrikhand", "sans-serif";
-        font-size: 180%;
+        font-size: 170%;
         margin-left: 1rem;
     }
 }
@@ -42,18 +43,18 @@ header {
     position: relative;
     & i {
         position: absolute;
-        right: 15px;
-        font-size: 180%;
+        right: 20px;
+        font-size: 170%;
     }
     & .far {
         background-color: transparent;
     }
     & .fas {
         background-clip: text;
-        right: -10px;
+        right: -4px;
         -webkit-background-clip: text;
         color: transparent;
-        transition: transform 400ms;
+        transition: transform 400ms, opacity 500ms;
         background-image: linear-gradient(var(--secondaire), var(--primaire));
         opacity: 0;
     }
@@ -73,6 +74,7 @@ header {
         font-size: 18px;
         border-bottom: 3px solid var(--tertiaire);
         width: 45px;
+        padding-bottom: 0.3em;
         margin-bottom: 1rem;
         text-transform: uppercase;
     }
@@ -124,13 +126,23 @@ header {
         text-overflow: ellipsis;
     }
 }
+.menu__description--wrap{
+    width: 62%;
+    & h4{
+        overflow:visible;
+        white-space: normal;
+        margin-top: 0.3rem;
+    }
+}
 .menu__price{
     display: flex;
     justify-content: flex-end;
     margin-top: 2.5rem;
     font-weight: bold;
     margin-left: auto;
-
+}
+.menu__price--margin{
+    margin-left: 3rem;
 }
 .menu__check{
     height: 75px;
@@ -165,23 +177,21 @@ header {
  .menu__title:hover .menu__description{
     width: 65%;
    }
-.btn__order{
+   .menu__title:hover .menu__description--wrap{
+    width: 62%;
+   } 
+.order{
+       background-color: var(--grislight);
+       height: 25vh;
+       padding-top: 3em;
+   } 
+ .btn__order{
+     margin: auto;
     width: 250px;
+    justify-content: center;
     @include mixins.button;
     @include mixins.box-shadow;
-    & a{
-        color: white;
-        margin-left: 0.3rem;
-        padding: 0rem 2.5rem;
-    }
-}    
-.order{
-    height:20vh ;
-    display: grid;
-    place-items:center;
-    background-color: var(--grislight);
-    padding-bottom: 2rem;
-    }
+ }
 @media (min-width: 768px) and (max-width: 1245px) {
 .menu__list {
   display: flex;
