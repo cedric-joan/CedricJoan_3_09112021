@@ -1,5 +1,5 @@
 ---
-#OHMYFOOD
+OHMYFOOD
 
 Projet 3 du cursus Développeur web avec Openclassrooms
 
